@@ -14,6 +14,8 @@ This is great for cache folders, distribution/build folders and files, and packa
 
 ## How to install
 
+Install via the Brackets extension manager.
+
 Use [brackets-npm-registry](https://github.com/zaggino/brackets-npm-registry)
 
 ## Configure

@@ -14,7 +14,7 @@ define(function (require, exports, module) {
 
     // Get the preferences for this extension
     var preferences = PreferencesManager.getExtensionPrefs(PackageJson.name),
-        prefKey     = 'reExcludeList',
+        prefKey     = 'excludeList',
         _oldFilter  = FileSystemImpl.prototype._indexFilter;
 
     var reTest = /\/(.+)\/(i?)$/,   // detects if the exclude settings are a regexp string
