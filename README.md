@@ -8,8 +8,9 @@ This is great for cache folders, distribution/build folders and files, and packa
 
 ## Based on works of:
 
-[JonathanWolfe/file-tree-exclude](https://github.com/JonathanWolfe/file-tree-exclude)
-[gruehle/exclude-folders](https://github.com/gruehle/exclude-folders)
+ - [zaggino/brackets-file-tree-exclude](https://github.com/zaggino/brackets-file-tree-exclude)
+ - [JonathanWolfe/file-tree-exclude](https://github.com/JonathanWolfe/file-tree-exclude)
+ - [gruehle/exclude-folders](https://github.com/gruehle/exclude-folders)
 
 ## How to install
 
@@ -33,18 +34,22 @@ Create a `.brackets.json` in project root (it may already exist) and add your se
 
 ```JSON
 {
-	"brackets-file-tree-exclude.excludeList": [
-		"/.git/",
-        "/dist/",
-        "/bower_components/",
-        "/node_modules/"
+    "mitchellsimoens.file-tree-exclude.excludeList": [
+        ".git",
+        "dist",
+        "bower_components",
+        "node_modules"
     ]
 }
 ```
 
 ## How it Matches
 
-Strings are escaped to regexp's and matched against relative path of the file in the tree.
-To exclude a directory called `node_modules` use `/node_modules/`.
-Using `/dist` will exclude all directories and files starting with `dist`.
-Using `.min.js/` will exclude all files (and directories) ending with `.min.js`.
+It takes the `excludeList` array (either the default or if `.brackets.json` file
+exists in the project root) and turns each string into a regular expression. So
+if a string is `"node_modules"` then it will turn it into
+`new RegExp("node_modules")`. You can specify expressions as strings also. So
+if a string is `"/foo/i"`, then it will turn it into `new RegExp("foo", "i")`.
+
+The resulting expressions are then matched against the realtive path fo the file
+in the tree.

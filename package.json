@@ -1,5 +1,5 @@
 {
-  "name": "brackets-regex-file-tree-exclude",
+  "name": "mitchellsimoens.file-tree-exclude",
   "version": "1.0.0",
   "description": "Excludes folders from the Brackets file system to avoid performance problems using RegExp.",
   "keywords": [
