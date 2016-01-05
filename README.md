@@ -37,7 +37,7 @@ Create a `.brackets.json` in project root (it may already exist) and add your se
 ```JSON
 {
     "mitchellsimoens.file-tree-exclude.excludeList": [
-        ".git",
+        ".git(?!ignore)",
         "dist",
         "bower_components",
         "node_modules"

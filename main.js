@@ -19,7 +19,7 @@ define(function (require, exports, module) {
 
     var reTest = /\/(.+)\/(i?)$/,   // detects if the exclude settings are a regexp string
         defaultExcludeList = [      // Default excludes
-            '.git',
+            '.git(?!ignore)',
             'dist',
             'bower_components',
             'node_modules'
