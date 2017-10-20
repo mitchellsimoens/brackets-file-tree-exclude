@@ -1,5 +1,7 @@
 # Brackets File Tree Exclude
 
+**NOTE: THIS IS UNMAINTAINED AS I HAVE MOVED AWAY FROM BRACKETS TO VSCODE AND DO NOT NEED TO EXCLUDE THINGS LIKE THIS**
+
 Brackets extension for excluding folders and files from the file tree, find in files, and quick open.
 
 This means that the files will be completely invisible to Brackets what will greatly improve overall performance of the editor.
